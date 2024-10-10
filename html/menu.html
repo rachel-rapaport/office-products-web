@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/menu.css">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="header">
+        <p>משלוחים חינם</p>
+        <div class="category-dropdown">
+            <select onchange="window.open(this.value, 'myFrame')">
+                <option disabled selected>בחר קטגוריה</option>
+                <option value="test.html">כלי כתיבה</option>
+                <option value="creation kit.html">מחברות</option>
+            </select>
+        </div>
+    </div>
+    <div class="menu">
+        <span class="menu-links">
+            <a href="test.html" target="myFrame">כלי כתיבה</a>
+            <a href="creation kit.html" target="myFrame">מחברות</a>
+        </span>
+    </div>
+
+    <iframe name="myFrame" src="test.html"></iframe>
+
+    <div class="footer">
+        <div id="icon">
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-facebook"></i>
+        </div>
+        <div id="text">
+            <p><b>כל הזכיות שמורות</b></p>
+        </div>
+    </div>
+</body>
+
+</html>
