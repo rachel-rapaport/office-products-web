@@ -32,8 +32,8 @@ function addToCart() {
     alert("addToCart");
 }
 
-function openModal(card) {
-    // need to be filled
-}
+// function openModal(card) {
+//     // need to be filled
+// }
 
 window.onload = createCards(0);
