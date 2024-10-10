@@ -6,23 +6,22 @@
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
+  width: 100%;
 }
 
 .header p {
   font-size: 1.2em;
   margin: 0;
   font-weight: bold;
-  color: #F5EDED; 
-  align-items: center;
+  color: #F5EDED;
   flex: 1;
 }
 
 .category-dropdown {
   display: none;
-  position: relative; 
-  flex: 2; 
-  width: 10%;
+  width: 20%;
+  right: 20px;
 }
 
 .category-dropdown select {
@@ -34,8 +33,8 @@
 
 .menu {
   float: right;
-  width: 10%; 
-  height: auto; 
+  width: 10%;
+  height: auto;
   padding-right: 3%;
   border-radius: 8px 0 0 8px;
   position: fixed;
@@ -44,11 +43,11 @@
   padding-top: 2%;
 }
 
-.menu-link{
+.menu-link {
   display: block;
 }
 
-.menu a {
+.menu button {
   display: block;
   background-color: inherit;
   color: black;
@@ -59,19 +58,19 @@
   text-align: center;
   cursor: pointer;
   transition: 0.3s;
-  text-decoration: none; 
+  text-decoration: none;
   font-weight: bold;
   border-radius: 5px;
 }
 
 
-.menu a:hover {
+.menu button:hover {
   background-color: #ddd;
   color: #333;
 }
 
 
-.menu a.active {
+.menu button.active {
   background-color: #ccc;
   color: #000;
 }
@@ -79,40 +78,55 @@
 
 @media screen and (max-width: 750px) {
   .menu-links {
-    display: none; /* Hide menu on smaller screens */
+    display: none;
+    /* Hide menu on smaller screens */
+  }
+
+  .category-dropdown {
+    display: block;
+    margin-right: 2%;
+    right: 20px;
+    position: relative;
+  }
+
+  .header h1 {
+    font-size: 1.5em;
+    /* Reduce title size */
+  }
+
+  .header p {
+    font-size: 1em;
+    /* Reduce subtitle size */
+  }
+
 }
 
-.category-dropdown {
-    display: block; /* Show dropdown for categories */
-    max-width: 150px;
+@media screen and (max-width: 625px) {
+  .category-dropdown select{
+     /* font-size: 0; */
+     width: 7%;
+  }
 }
 
-.header h1 {
-    font-size: 1.5em; /* Reduce title size */
-}
+.myFrame {
+  width: 90%;
 
-.header p {
-    font-size: 1em; /* Reduce subtitle size */
-}
-
-}
-
-
-
-iframe {
-  width: 100%;
-  height: 90vh; 
   border: none;
+  left: 0;
+  margin-right: 10%;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
 
 .footer {
-  position: fixed;
+  position: relative;
   left: 0;
   bottom: 0;
   width: 100%;
   color: black;
   text-align: center;
   background-color: #F5EDED;
+  height: auto;
   padding: 20px;
-  margin-right: 2%;
+  margin-top: 20px;
 }

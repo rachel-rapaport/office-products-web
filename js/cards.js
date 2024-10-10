@@ -6,7 +6,7 @@ function createCards(categoryId) {
     let cardList = document.querySelector("#card-list");
     const category = categories.find(category => category.id == categoryId);
     const collection = category ? category.collection : [];
-
+    cardList.innerHTML="";
     const card = collection.map(card => {
         return `<article>
             <h2>${card.title}</h2>
@@ -17,7 +17,7 @@ function createCards(categoryId) {
             </span>
         </article > `
     }).join('');
-
+    
     cardList.innerHTML += card;
 
     let cartButtons = document.querySelectorAll(".cart");
@@ -25,6 +25,8 @@ function createCards(categoryId) {
         btn.addEventListener('click', addToCart);
     });
 }
+
+window.createCards = createCards;
 
 function addToCart() {
     alert("addToCart");
