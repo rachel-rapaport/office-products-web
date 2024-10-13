@@ -23,11 +23,23 @@ function createCards(categoryId) {
                 </span>
             </span>`;
 
+
+            
         const addToCartBtn = cardElement.querySelector('.cart-icon');
         addToCartBtn.addEventListener('click', () => addToCart(card));
 
+        cardElement.addEventListener('click', () => {
+            openModal(card.catalogId, category.name);
+        });
+
         cardList.appendChild(cardElement);
-    })
+
+        
+        
+    }
+
+)
+    
 }
 
 
