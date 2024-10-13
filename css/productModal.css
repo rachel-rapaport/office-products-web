@@ -9,7 +9,7 @@ body {
     position: fixed;
     left: 0;
     top: 0;
-    background-color: rgba(226, 218, 214,0.6);    
+    background-color: rgba(226, 218, 214, 0.6);
     width: 100%;
     height: 100%;
 }
@@ -26,11 +26,23 @@ body {
     flex-direction: column;
 }
 
-.productModal p {
-    position: absolute;
+.productModal #text {
+    display: flex;
+    justify-content: space-around;
+    /* padding-left: 5%;; */
+    align-items: center;
     font-weight: bold;
+    font-size: x-large;
+    width: 50vw;
+
+
+}
+
+/* .productModal p {
+    position: absolute;
+    font-weight: bold; 
     right: 3.9%;
-    text-align: right;
+    text-align: right; 
     font-size: x-large;
 
 }
@@ -41,7 +53,7 @@ body {
     font-size: x-large;
     left: 10%;
     top: 5%;
-}
+} */
 
 .productModal img {
     position: absolute;
@@ -50,6 +62,7 @@ body {
     transform: translate(-50%, -50%);
     width: 40%;
     height: auto;
+    max-height: 70%;
 }
 
 
@@ -73,3 +86,57 @@ body {
     background-color: #6482AD;
     font-size: large;
 }
+
+@media screen and (max-width: 750px) {
+    .productModal #text {
+        font-size: large;
+        flex-direction: column;
+
+    }
+
+    .productModal span {
+        top: 9%;
+        left: 53%;
+    }
+
+    .productModal button {
+        width: 40%;
+        height: 8%;
+    }
+
+    #add {
+        width: 40%;
+        height: 12%;
+    }
+
+    .productModal img {
+        width: 55%;
+        height: auto;
+    }
+}
+
+
+
+
+
+/* @media screen and (max-width: 1000px) and (min-width: 800) {
+    .productModal img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .productModal button {
+        width: 20%;
+        height: 6%;
+    }
+
+    #add {
+        width: 30%;
+        height: 8%;
+    }
+
+    .productModal{
+        background-color: red;
+    }
+
+} */
