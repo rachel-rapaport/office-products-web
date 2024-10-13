@@ -20,7 +20,6 @@ body {
     height: 60vh;
     width: 50vw;
     background-color: rgba(226, 218, 214);
-    /* background-color: red; */
     z-index: 1;
     display: flex;
     flex-direction: column;
@@ -29,7 +28,6 @@ body {
 .productModal #text {
     display: flex;
     justify-content: space-around;
-    /* padding-left: 5%;; */
     align-items: center;
     font-weight: bold;
     font-size: x-large;
@@ -37,23 +35,6 @@ body {
 
 
 }
-
-/* .productModal p {
-    position: absolute;
-    font-weight: bold; 
-    right: 3.9%;
-    text-align: right; 
-    font-size: x-large;
-
-}
-
-.productModal span {
-    position: absolute;
-    font-weight: bold;
-    font-size: x-large;
-    left: 10%;
-    top: 5%;
-} */
 
 .productModal img {
     position: absolute;
@@ -79,7 +60,7 @@ body {
     font-size: medium;
 }
 
-#add {
+.productModal #add {
     right: 3%;
     width: 11%;
     height: 10%;
@@ -87,6 +68,7 @@ body {
     font-size: large;
 }
 
+/* responsive custom */
 @media screen and (max-width: 750px) {
     .productModal #text {
         font-size: large;
@@ -114,29 +96,3 @@ body {
         height: auto;
     }
 }
-
-
-
-
-
-/* @media screen and (max-width: 1000px) and (min-width: 800) {
-    .productModal img {
-        max-width: 100%;
-        height: auto;
-    }
-
-    .productModal button {
-        width: 20%;
-        height: 6%;
-    }
-
-    #add {
-        width: 30%;
-        height: 8%;
-    }
-
-    .productModal{
-        background-color: red;
-    }
-
-} */

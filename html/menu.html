@@ -7,11 +7,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css/menu.css">  
     <link rel="stylesheet" href="../css/cards.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <script type="module" src="../js/cards.js" defer></script>
     <link rel="stylesheet" href="../css/productModal.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="module" src="../js/cards.js" defer></script>
 </head>
 
 <body>
@@ -24,8 +22,9 @@
             </select>
         </div>
         <p>משלוחים חינם</p>
-
     </div>
+
+
     <img src="/assets/images/background.png" alt="background" >
     <div class="menu">
         <span class="menu-links">
@@ -35,12 +34,18 @@
     </div>
 
     <div class="myFrame">
-        <div id="card-list"></div>
+        <div class="namePage"></div>
+        <div class="button-filter">
+            <button onclick="cardFilter('rows')">מחברות שורה</button>
+            <button onclick="cardFilter('squares')">מחברות משבצות</button>
+        </div>
+        <div id="card-list">
+        </div>
     </div>
 
     <!-- <iframe name="myFrame" onload="createCards(0)"></iframe> -->
 
-    <!-- modal -->
+    <!-- Product Modal -->
     <div class="modal">
         <div class="productModal">
             <button onclick="closeModal()">סגור</button>
