@@ -4,12 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/menu.css">  
+    <title>פסגות</title>
+    <link rel="stylesheet" href="../css/menu.css">
     <link rel="stylesheet" href="../css/cards.css">
     <link rel="stylesheet" href="../css/productModal.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script type="module" src="../js/cards.js" defer></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap">
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <script type="module" src="../js/productModal.js" defer></script>
 </head>
 
 <body>
@@ -24,7 +27,6 @@
         <p>משלוחים חינם</p>
     </div>
 
-
     <div class="menu">
         <span class="menu-links">
             <button onclick="createCards(0)">מחברות</button>
@@ -32,29 +34,28 @@
         </span>
     </div>
 
+    <button id="cart-btn" onclick="window.location.href = 'cart.html'">סל הקניות שלי</button>
+
     <div class="myFrame">
-        <img id="background" src="/assets/images/background.png" alt="background" >
+        <img id="background" src="/assets/images/background.png" alt="background">
         <div class="namePage"></div>
         <div class="button-filter">
             <button onclick="cardFilter('rows')">מחברות שורה</button>
             <button onclick="cardFilter('squares')">מחברות משבצות</button>
         </div>
         <div id="card-list">
+            <!-- When the page loads, the tag will be filled with cards by the createCards() function -->
         </div>
     </div>
-
-    <!-- <iframe name="myFrame" onload="createCards(0)"></iframe> -->
 
     <!-- Product Modal -->
     <div class="modal">
         <div class="productModal">
             <button onclick="closeModal()">סגור</button>
-            <button id="add">הוסף לסל</button>
         </div>
     </div>
-    <script type="module" src="../js/productModal.js"></script>
-    <!-- end modal -->
 
+    <!-- end modal -->
     <div class="footer">
         <div id="icon">
             <i class="fa fa-instagram"></i>
@@ -64,8 +65,6 @@
             <p><b>כל הזכיות שמורות</b></p>
         </div>
     </div>
-
-
 </body>
 
 </html>

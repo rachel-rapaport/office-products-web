@@ -1,7 +1,3 @@
-body {
-    direction: rtl;
-}
-
 .modal {
     display: none;
     justify-content: center;
@@ -13,7 +9,6 @@ body {
     width: 100%;
     height: 100%;
 }
-
 
 .productModal {
     position: relative;
@@ -32,8 +27,6 @@ body {
     font-weight: bold;
     font-size: x-large;
     width: 50vw;
-
-
 }
 
 .productModal img {
@@ -45,7 +38,6 @@ body {
     height: auto;
     max-height: 70%;
 }
-
 
 .productModal button {
     border: 2px solid #6482AD;
@@ -68,12 +60,10 @@ body {
     font-size: large;
 }
 
-/* responsive custom */
 @media screen and (max-width: 750px) {
     .productModal #text {
         font-size: large;
         flex-direction: column;
-
     }
 
     .productModal span {
