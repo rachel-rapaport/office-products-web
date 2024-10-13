@@ -1,10 +1,8 @@
 import data from './cards-collections.json' with { type: 'json' };
-import openModal from '../js/productModal.js';
 const categories = [{ id: 0, name: "notebooks", collection: data.notebooks }, { id: 1, name: "craft", collection: data.craft }]
 
 
 function createCards(categoryId) {
-
 
     let cardList = document.querySelector("#card-list");
     const category = categories.find(category => category.id == categoryId);
@@ -18,7 +16,7 @@ function createCards(categoryId) {
             <img class="img-card" src="${card.image}" alt="${card.title}"></img>
             <span class="cart-price">            
                 <p id="price">₪${card.price}</p>
-                <span class="cart-icon">
+                <span class="cart-icon" title="הוספה לסל">
                     <i class="iconify" data-icon="mynaui:cart-solid"></i>
                 </span>
             </span>`;
