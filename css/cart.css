@@ -1,0 +1,141 @@
+:root {
+    --color1: #F5EDED;
+    --color2: #7FA1C3;
+    --color3: #E2DAD6;
+    --color4: #F5EDED;
+    --primary-font-family: Fredoka;
+}
+
+body {
+    min-height: 100vh;
+    direction: rtl;
+    margin: 5vh 0;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+#continue-buy-btn {
+    width: 200px;
+    height: 50px;
+    border-radius: 50px;
+    color: var(--color2);
+    background-color: var(--color1);
+    border: none;
+    font-size: 2.5vh;
+    font-weight: bold;
+    margin: 5vh 5vw 5vh 0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5vw;
+}
+
+#continue-buy-btn:hover {
+    transform: scale(1.03);
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 5vh;
+    text-align: center;
+    align-content: center;
+    font-family: var(--primary-font-family);
+    text-align: center;
+}
+
+#item-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+article {
+    border-radius: 40px;
+    border: 1.5px solid #E7E7E7;
+    min-width: 80%;
+    min-height: 2vh;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+}
+
+#item-text {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 1.5vw;
+}
+
+article h2 {
+    font-weight: 400;
+    font-size: 2.5vh;
+    text-align: center;
+    align-content: center;
+    max-width: 30vw;
+    font-family: var(--primary-font-family);
+    text-align: center;
+}
+
+#item-details {
+    color: var(--color2);
+    margin: 0;
+    font-family: var(--primary-font-family);
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+
+article img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
+
+#empty-cart {
+    width: 200px;
+    height: 50px;
+    border-radius: 50px;
+    color: var(--color1);
+    background-color: var(--color2);
+    border: none;
+    font-size: 2.5vh;
+    font-weight: bold;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5vw;
+    margin: 0 auto;
+    margin-top: 10vh;
+}
+
+#empty-cart:hover {
+    opacity: 0.7;
+}
+
+@media screen and (max-width: 800px) {
+    article {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #item-text {
+        flex-direction: column;
+    }
+
+    #item-details {
+        flex-direction: column;
+    }
+}
