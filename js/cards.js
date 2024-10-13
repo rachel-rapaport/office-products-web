@@ -11,6 +11,7 @@ function createCards(categoryId) {
     const collection = category ? category.collection : [];
 
 
+    
     const cards = collection.map(card => {
     
         const article = document.createElement('article');
