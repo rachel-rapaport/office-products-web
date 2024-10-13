@@ -14,9 +14,9 @@ function createCards(categoryId) {
     const category = categories.find(category => category.id == categoryId);
 
 
-    cardList.innerHTML="";
 
     const collection = category ? category.collection : [];
+    cardList.innerHTML="";
 
 
     collection.forEach(card => {
@@ -42,14 +42,13 @@ function createCards(categoryId) {
 
         cardList.appendChild(cardElement);
 
-        
-        
     }
 
 )
     
 }
 
+window.createCards=createCards;
 
 function addToCart(item) {
     console.log("add to cart");
