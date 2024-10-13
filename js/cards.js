@@ -10,6 +10,7 @@ function createCards(categoryId) {
     
     const collection = category ? category.collection : [];
 
+cardList.innerHTML='';
 
     const cards = collection.map(card => {
     
