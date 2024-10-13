@@ -10,11 +10,6 @@ function createCards(categoryId) {
         craft();
     }
 
-
-function createCards(categoryId) {
-
-
-
     let cardList = document.querySelector("#card-list");
     const category = categories.find(category => category.id == categoryId);
 
