@@ -7,7 +7,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: auto;
 }
 
 .header p {
@@ -110,12 +110,55 @@
 
 .myFrame {
   width: 90%;
-
   border: none;
   left: 0;
   margin-right: 10%;
   margin-top: 2%;
   margin-bottom: 2%;
+}
+
+.button-filter{
+  margin-right: 15%;
+}
+
+.button-filter button{
+  margin: 2%;
+  background-color: inherit;
+  color: black;
+  padding: 16px 12px;
+  width: auto;
+  border: none;
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+.button-filter button:hover {
+  background-color: #ddd;
+  color: #333;
+}
+
+
+.button-filter button.active {
+  background-color: #ccc;
+  color: #000;
+}
+.myFrame #background {
+  width: 90%;
+  left: 2%;
+  margin-right: 10%;
+  margin-left: 10%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.namePage{
+  margin-right: 15%;
+  font-size: 30px;
+  margin-bottom: 1%;
 }
 
 .footer {
