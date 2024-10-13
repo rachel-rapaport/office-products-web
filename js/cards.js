@@ -10,6 +10,7 @@ function createCards(categoryId) {
     
     const collection = category ? category.collection : [];
 
+
     const cards = collection.map(card => {
     
         const article = document.createElement('article');
@@ -20,8 +21,7 @@ function createCards(categoryId) {
             <span class="cart-price">            
                 <p id="price">₪${card.price}</p>
                 <span class="cart" title="הוספה לסל"><i class="iconify" data-icon="mynaui:cart-solid"></i></span>
-            </span>
-        `;
+            </span> `;
     
         article.addEventListener('click', () => {
             openModal(card.catalogId, category.name);
@@ -31,13 +31,12 @@ function createCards(categoryId) {
     });
     cards.forEach(card => cardList.appendChild(card));
 
+
     let cartButtons = document.querySelectorAll(".cart");
     cartButtons.forEach(btn => {
         btn.addEventListener('click', addToCart);
     });
 }
-
-
 
 function addToCart() {
     alert("addToCart");
