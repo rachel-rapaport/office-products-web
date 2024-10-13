@@ -6,28 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../css/menu.css">  
+    <link rel="stylesheet" href="../css/cards.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script type="module" src="../js/cards.js" defer></script>
+    <link rel="stylesheet" href="../css/productModal.css">
+
 </head>
 
 <body>
     <div class="header">
-        <p>משלוחים חינם</p>
         <div class="category-dropdown">
-            <select onchange="window.open(this.value, 'myFrame')">
+            <select onchange="createCards(this.value, 'myFrame')">
                 <option disabled selected>בחר קטגוריה</option>
-                <option value="test.html">כלי כתיבה</option>
-                <option value="creation kit.html">מחברות</option>
+                <option value="0">מחברות</option>
+                <option value="1">מלאכה</option>
             </select>
         </div>
+        <p>משלוחים חינם</p>
+
     </div>
     <div class="menu">
         <span class="menu-links">
-            <a href="test.html" target="myFrame">כלי כתיבה</a>
-            <a href="creation kit.html" target="myFrame">מחברות</a>
+            <button onclick="createCards(0)">מחברות</button>
+            <button onclick="createCards(1)">מלאכה</button>
         </span>
     </div>
 
-    <iframe name="myFrame" src="test.html"></iframe>
+    <div class="myFrame">
+        <div id="card-list"></div>
+    </div>
+
+    <!-- <iframe name="myFrame" onload="createCards(0)"></iframe> -->
+
+    <!-- modal -->
+    <div class="modal">
+        <div class="productModal">
+            <button onclick="closeModal()">סגור</button>
+            <button id="add">הוסף לסל</button>
+        </div>
+    </div>
+    <script type="module" src="../js/productModal.js"></script>
+    <!-- end modal -->
 
     <div class="footer">
         <div id="icon">
@@ -38,6 +58,8 @@
             <p><b>כל הזכיות שמורות</b></p>
         </div>
     </div>
+
+
 </body>
 
 </html>
