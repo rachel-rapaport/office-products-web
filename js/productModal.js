@@ -10,23 +10,34 @@ export default function openModal(id,category){
 
    let modalProduct = document.getElementsByClassName('productModal')[0];
    
+   let text = document.createElement('div');
+   text.id='text';
+   console.log(text.id);
+   
+
    if(product.title){
     console.log(product.title);
     
    let title = document.createElement('p')
    title.innerHTML = product.title; 
-    modalProduct.appendChild(title)
+   text.appendChild(title);
+    // modalProduct.appendChild(title)
    }
    if(product.price){
     let price = document.createElement('span');
     price.innerHTML =  `מחיר: ${product.price}  ₪`;
-    modalProduct.appendChild(price);
+    text.appendChild(price);
+    // modalProduct.appendChild(price);
    }
+
+   modalProduct.appendChild(text);
+
    if(product.image){
     let image = document.createElement('img')
     image.src = product.image;
     modalProduct.appendChild(image)
    }
+
 
 
 }
