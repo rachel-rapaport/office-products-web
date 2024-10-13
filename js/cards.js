@@ -34,8 +34,9 @@ function createCards(categoryId) {
 
             
         const addToCartBtn = cardElement.querySelector('.cart-icon');
-        addToCartBtn.addEventListener('click', () => addToCart(card));
 
+        addToCartBtn.addEventListener('click', () => addToCart(card));
+        
         cardElement.addEventListener('click', () => {
             openModal(card.catalogId, category.name);
         });

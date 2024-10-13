@@ -7,7 +7,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: auto;
 }
 
 .header p {
@@ -145,6 +145,14 @@
 .button-filter button.active {
   background-color: #ccc;
   color: #000;
+}
+.myFrame #background {
+  width: 90%;
+  left: 2%;
+  margin-right: 10%;
+  margin-left: 10%;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
 
 .namePage{
