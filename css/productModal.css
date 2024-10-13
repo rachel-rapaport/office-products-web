@@ -9,6 +9,7 @@ body {
     position: fixed;
     left: 0;
     top: 0;
+    background-color: rgba(226, 218, 214,0.6);    
     width: 100%;
     height: 100%;
 }
@@ -18,7 +19,7 @@ body {
     position: relative;
     height: 60vh;
     width: 50vw;
-    background-color: rgba(226, 218, 214, 0.2);
+    background-color: rgba(226, 218, 214);
     /* background-color: red; */
     z-index: 1;
     display: flex;
@@ -53,7 +54,7 @@ body {
 
 
 .productModal button {
-    border: none;
+    border: 2px solid #6482AD;
     position: absolute;
     width: 8%;
     height: 7%;
@@ -62,9 +63,10 @@ body {
     opacity: 100%;
     bottom: 4%;
     left: 3%;
-    font-size: medium;}
+    font-size: medium;
+}
 
- #add{
+#add {
     right: 3%;
     width: 11%;
     height: 10%;
