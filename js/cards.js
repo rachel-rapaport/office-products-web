@@ -7,14 +7,12 @@ function createCards(categoryId) {
     } else {
         craft();
     }
+
     let cardList = document.querySelector("#card-list");
     const category = categories.find(category => category.id == categoryId);
 
-
-
     const collection = category ? category.collection : [];
     cardList.innerHTML = "";
-
 
     collection.forEach(card => {
         const cardElement = document.createElement('article');
@@ -28,15 +26,13 @@ function createCards(categoryId) {
                 </span>
             </span>`;
 
-
-
         const addToCartBtn = cardElement.querySelector('.cart-icon');
 
         addToCartBtn.addEventListener('click', () => addToCart(card));
 
-        cardElement.addEventListener('click', () => {
-            openModal(card.catalogId, category.name);
-        });
+        cardElement.addEventListener('click', () =>
+            openModal(card.catalogId, category.name)
+        );
 
         cardList.appendChild(cardElement);
     }
@@ -46,7 +42,7 @@ function createCards(categoryId) {
 window.createCards = createCards;
 
 function addToCart(item) {
-    console.log("add to cart");
+    event.stopPropagation();
 
     let itemsInCart = JSON.parse(localStorage.getItem('itemsInCart')) || [];
     let itemIndex = itemsInCart.findIndex(element => element.item.catalogId === item.catalogId);
@@ -78,24 +74,25 @@ function cardFilter(filterId) {
             <h2>${card.title}</h2>
             <img class="img-card" src="${card.image}" alt="${card.title}"></img>
             <span class="cart-price">            
-
             <p id="price">₪${card.price}</p>
-            <span class="cart" title="הוספה לסל"><i class="iconify" data-icon="mynaui:cart-solid"></i></span>
+            <span class="cart" title="הוספה לסל">
+            <i class="iconify" data-icon="mynaui:cart-solid"></i>
+            </span>
         </span> `;
 
-        article.addEventListener('click', () => {
-            openModal(card.catalogId, category.name);
-        });
+        // article.addEventListener('click', () => {
+        //     openModal(card.catalogId, category.name);
+        // });
 
-        return article;
+        // return article;
     });
     cards.forEach(card => cardList.appendChild(card));
 
 
-    let cartButtons = document.querySelectorAll(".cart");
-    cartButtons.forEach(btn => {
-        btn.addEventListener('click', addToCart);
-    });
+    // let cartButtons = document.querySelectorAll(".cart");
+    // cartButtons.forEach(btn => {
+    //     btn.addEventListener('click', addToCart);
+    // });
 }
 window.cardFilter = cardFilter;
 
