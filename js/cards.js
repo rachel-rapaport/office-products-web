@@ -19,17 +19,18 @@ function createCards(categoryId) {
             <h2>${card.title}</h2>
             <img class="img-card" src="${card.image}" alt="${card.title}"></img>
             <span class="cart-price">            
-                <p id="price">₪${card.price}</p>
-                <span class="cart" title="הוספה לסל"><i class="iconify" data-icon="mynaui:cart-solid"></i></span>
-            </span> `;
-    
-        article.addEventListener('click', () => {
-            openModal(card.catalogId, category.name);
-        });
-    
-        return article;
+
+            <p id="price">₪${card.price}</p>
+            <span class="cart" title="הוספה לסל"><i class="iconify" data-icon="mynaui:cart-solid"></i></span>
+        </span> `;
+
+    article.addEventListener('click', () => {
+        openModal(card.catalogId, category.name);
     });
-    cards.forEach(card => cardList.appendChild(card));
+
+    return article;
+});
+cards.forEach(card => cardList.appendChild(card));
 
 
     let cartButtons = document.querySelectorAll(".cart");
@@ -37,6 +38,8 @@ function createCards(categoryId) {
         btn.addEventListener('click', addToCart);
     });
 }
+
+window.createCards = createCards;
 
 function addToCart() {
     alert("addToCart");
